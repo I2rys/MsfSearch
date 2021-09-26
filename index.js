@@ -45,6 +45,11 @@ Example: node index.js nice`)
     process.exit()
 }
 
+if(Self_Args[0] == ""){
+    console.log("Invalid keyword.")
+    process.exit()
+}
+
 Self_Args[0] = Self_Args[0].toLowerCase()
 
 var results = []
