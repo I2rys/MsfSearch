@@ -83,7 +83,8 @@ directory_files("./modules", function(err, files){
             }
         }
 
-        if(result.indexOf(Self_Args[0]) != -1){
+        if(result.indexOf(Self_Args[0]) != -1 && result.indexOf("[") != -1){
+            result = result.replace(/.\w+.js/g, "")
             results.push(result)
         }
     })
